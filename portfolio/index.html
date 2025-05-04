@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pallavi V | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --bg-light: #f9fbfc;
+      --text-light: #333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f1f1f1;
+      --accent: #8B5E3C;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .cover-img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-top: -70px;
+      background-color: white;
+      object-fit: cover;
+    }
+
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 32px;
+    }
+
+    .typing-text {
+      font-size: 16px;
+      color: var(--accent);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--accent);
+      width: 0;
+      margin: auto;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(6px);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    body.dark .card {
+      background: #2c2c2c;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .download-btn:hover {
+      background: #6f462c;
+    }
+
+    @media (max-width: 600px) {
+      .profile-img {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .typing-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body class="light">
+
+  <button class="toggle-btn" onclick="toggleMode()">☀️ / 🌙</button>
+
+  <div class="container">
+    <header>
+      <img src="C:\Users\Pallavi\Desktop\po\1.png" alt="Cover" class="cover-img">
+      <img src="C:\Users\Pallavi\Desktop\portfolio\pht.jpg" alt="Pallavi's Photo" class="profile-img">
+      <h1>Pallavi V</h1>
+      <p class="typing-text">BCA Graduate | MCA Student | Aspiring Developer</p>
+      <a href="C:\Users\Pallavi\Desktop\resume(pallavi).pdf" download class="download-btn">📄 Download Resume</a>
+    </header>
+
+    <div class="card animate__animated">
+      <h2>🎓 Education</h2>
+      <ul>
+        <li>MCA – CMR University (2024–26), CGPA: 8.86</li>
+        <li>BCA – BES Degree College (2021–24), CGPA: 8.58</li>
+        <li>12th – JSS PU College, 75%</li>
+        <li>10th – JSS High School, 74%</li>
+      </ul>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>💼 Experience</h2>
+      <ul>
+        <li>
+          <strong>Mobile Application Developer Intern</strong><br>
+          <em>UTL Technology Pvt. Ltd.</em><br>
+          <span style="color:gray">Contributed to Android app development, worked on UI/UX using Figma, and practiced mobile development tools and version control.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>📁 Projects</h2>
+      <ul>
+        <li><strong>Food-Store</strong> – E-commerce food ordering system</li>
+        <li><strong>Face Recognition Attendance</strong> – Python Flask + OpenCV</li>
+        <li><strong>E-Commerce Platform</strong> – Secure and user-friendly digital store</li>
+      </ul>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>🛠 Skills</h2>
+      <p>HTML, CSS, Java (Beginner), Python (Beginner)</p>
+      <p>Tools: Power BI, PowerPoint</p>
+      <p>Platforms: VS Code, Figma, Android Studio</p>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>📜 Certifications</h2>
+      <ul>
+        <li>SQL – Databases101</li>
+        <li>HTML – Great Learning</li>
+        <li>Python AI – NASCOM</li>
+        <li>Data Science – IBM</li>
+        <li>Web/Mobile Developer – NCVET</li>
+      </ul>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>✨ Soft Skills & Hobbies</h2>
+      <p>Problem-solving, teamwork, fast learning, pressure handling</p>
+      <p>Hobbies: Dancing, Crafting</p>
+    </div>
+
+    <div class="card animate__animated">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:pallavirajeshwari1404@gmail.com">pallavirajeshwari1404@gmail.com</a></p>
+      <p>Phone: +91 77953 86741</p>
+      <p>Location: Bengaluru, India</p>
+    </div>
+
+    <!-- ✅ Feedback Section (Google Form) -->
+    <div class="card animate__animated">
+      <h2>📝 Feedback</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNc1RDvtLfWz5bVsEYIEMWbJMeZg-f8nHVIB3HgbhUmgbFHg/viewform?usp=header"embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+    <footer>
+      Pallavi V
+    </footer>
+  </div>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+    }
+
+    // Animate cards on scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
